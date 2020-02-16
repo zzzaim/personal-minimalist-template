@@ -1,0 +1,37 @@
+doctype html
+
+mixin box(shadowless=true)
+  - var classes = [shadowless ? 'is-shadowless' : '', attributes.class]
+  .box(class=classes)
+    block
+
+html
+
+  head
+    meta(charset='utf-8')
+    title= title
+    link(rel='stylesheet' href='./style.scss')
+
+  body
+
+    header.hero.is-large
+      .hero-body
+        .container
+          .columns.is-vcentered
+            .column
+              h1.title.is-1= title
+              h3.subtitle.is-3= subtitle
+            .column.has-text-centered
+              p photo
+
+    section.section
+      .container
+        .columns
+          .column
+            +box.box-about
+              include about.pug
+            +box(false).box-tips
+              include tips.pug
+          .column
+            +box.box-links
+              include links.pug

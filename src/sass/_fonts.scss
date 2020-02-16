@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+/* archivo-regular - latin */
+@font-face {
+  font-family: "Archivo";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Archivo Regular"), local("Archivo-Regular"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("fonts/archivo-v6-latin-regular.woff2") format("woff2"),
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+      url("fonts/archivo-v6-latin-regular.woff") format("woff");
+}
+
+/* archivo-700 - latin */
+@font-face {
+  font-family: "Archivo";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Archivo Bold"), local("Archivo-Bold"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("fonts/archivo-v6-latin-700.woff2") format("woff2"),
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+      url("fonts/archivo-v6-latin-700.woff") format("woff");
+}

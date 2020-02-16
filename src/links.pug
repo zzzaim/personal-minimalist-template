@@ -1,0 +1,36 @@
+// Set social media links in template config file.
+
+-
+  var urls = {
+    twitter: (name) => `https://twitter.com/${name}`,
+    github: (name) => `https://github.com/${name}`,
+    medium: (name) => `https://medium.com/@${name}`,
+    facebook: (name) => `https://facebook.com/${name}`,
+    youtube: (name) => `https://youtube.com/${name}`,
+  };
+
+  var fontawesome = '../node_modules/@fortawesome/fontawesome-free/svgs';
+
+  var icons = {
+    twitter: `${fontawesome}/brands/twitter-square.svg`,
+    github: `${fontawesome}/brands/github-square.svg`,
+    medium: `${fontawesome}/brands/medium.svg`,
+    facebook: `${fontawesome}/brands/facebook-square.svg`,
+    youtube: `${fontawesome}/brands/youtube.svg`
+  };
+
+.content
+  h1 Social Media
+
+for link in links
+  -
+    var name = link.name
+    var site = link.site;
+    var icon = icons[site];
+    var url = urls[site](name);
+
+  div.social-link.is-flex
+    figure.image.is-32x32
+      image.has-ratio(src=icon width="32")
+    span.socal-link-anchor
+      a(href=url)= name
