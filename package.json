@@ -5,8 +5,13 @@
   "main": "index.js",
   "author": "Zaim Bakar <zaim@eml.cc> (https://zbr.works)",
   "license": "MIT",
+  "scripts": {
+    "dev": "scripts/parcel",
+    "build": "scripts/parcel build"
+  },
   "devDependencies": {
     "htmlhint": "^0.11.0",
+    "parcel-bundler": "^1.12.4",
     "prettier": "^1.19.1",
     "stylelint": "^13.2.0",
     "stylelint-config-prettier": "^8.0.1",

@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+
+for ext in pug html; do
+  if [ -f "src/index.${ext}" ]; then
+    exec parcel "$@" "src/index.${ext}"
+  fi
+done
+
+echo "No entrypoint found."
+exit 1
