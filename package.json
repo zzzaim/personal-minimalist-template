@@ -1,0 +1,15 @@
+{
+  "name": "blank-html",
+  "version": "0.0.1",
+  "description": "Blank HTML starter project",
+  "main": "index.js",
+  "author": "Zaim Bakar <zaim@eml.cc> (https://zbr.works)",
+  "license": "MIT",
+  "devDependencies": {
+    "htmlhint": "^0.11.0",
+    "prettier": "^1.19.1",
+    "stylelint": "^13.2.0",
+    "stylelint-config-prettier": "^8.0.1",
+    "stylelint-prettier": "^1.1.2"
+  }
+}
