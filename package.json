@@ -1,7 +1,7 @@
 {
-  "name": "template-personal-minimalist",
+  "name": "decentralized-website-starter",
   "version": "0.0.1",
-  "description": "Decentralized website template: Personal Minimalist",
+  "description": "Decentralized website starter template",
   "author": "Zaim Bakar <zaim@eml.cc> (https://zbr.works)",
   "license": "MIT",
   "private": true,
@@ -9,11 +9,7 @@
     "dev": "scripts/parcel",
     "build": "scripts/parcel build"
   },
-  "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.12.1",
-    "bulma": "^0.8.0",
-    "cryptocurrency-icons": "^0.16.1"
-  },
+  "dependencies": {},
   "devDependencies": {
     "htmlhint": "^0.11.0",
     "node-sass": "^4.13.1",
@@ -21,7 +17,6 @@
     "posthtml-inline-svg": "^0.1.0",
     "posthtml-lorem": "^1.0.0",
     "prettier": "^1.19.1",
-    "pug-lint": "^2.6.0",
     "stylelint": "^13.2.0",
     "stylelint-config-prettier": "^8.0.1",
     "stylelint-prettier": "^1.1.2"
