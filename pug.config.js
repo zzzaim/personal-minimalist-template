@@ -8,7 +8,7 @@ module.exports = {
       address: "nakamoto.crypto",
 
       // Change these to all the currencies you accept
-      coins: ["BTC", "ETH", "LTC", "XRP"]
+      coins: ["BTC", "BCH", "ETH", "LTC", "XRP", "USDT"]
     },
 
     // Change these to your own social media links

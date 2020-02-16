@@ -1,6 +1,6 @@
-// Set address and accepted crypto currencies in the config file.
+//- Set address and accepted crypto currencies in the config file.
 
-- var path = '../node_modules/cryptocurrency-icons/svg/color';
+- var path = '../node_modules/cryptocurrency-icons/svg/black';
 - var ref = unstoppableDomains ? `r/${unstoppableDomains}` : '';
 
 .content
@@ -11,18 +11,25 @@
     Any tips and donations is greatly appreciated! You may send any of
     the following coins to the address below. Thank you!
 
+//
+  The following are icons for accepted crypto currencies.
+  Coins: ["BTC", "BCH", "ETH", "LTC", "XRP", "USDT"]
+  See the "title" attribute of the <div class="coin"> element.
+  Remove the ones you don't accept.
 .cryptos.is-flex
   for coin in tips.coins
-    .coin
+    .coin(title=coin)
       figure.image.is-32x32
-        image(src=`${path}/${coin.toLowerCase()}.svg` width="32" title=coin)
+        image(src=`${path}/${coin.toLowerCase()}.svg` width="32")
 
 .crypto-link.has-text-centered
+  // Change this to your own domain
   h4.title.is-4= tips.address
 
 hr.is-invisible
 
 .content.unstoppable-domain.is-small.has-text-centered
+  // Change or remove the referral code
   p.
     Get your own #[code .crypto] domain at
     #[a(href=`https://unstoppabledomains.com/${ref}`) unstoppabledomains.com]
