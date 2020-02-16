@@ -7,7 +7,7 @@
   "private": true,
   "scripts": {
     "dev": "scripts/parcel",
-    "build": "scripts/parcel build"
+    "build": "scripts/build"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.12.1",

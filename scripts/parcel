@@ -2,7 +2,7 @@
 
 for ext in pug html; do
   if [ -f "src/index.${ext}" ]; then
-    exec parcel "$@" "src/index.${ext}"
+    exec npx parcel "$@" "src/index.${ext}"
   fi
 done
 
