@@ -1,8 +1,28 @@
-// Change the language of tip solitication to your liking.
 // Set address and accepted crypto currencies in the config file.
+
+- var path = '../node_modules/cryptocurrency-icons/svg/color';
+- var ref = unstoppableDomains ? `r/${unstoppableDomains}` : '';
 
 .content
   h1 Tips
+
+  // Change the wording of tip solicitation to your liking.
   p.
     Any tips and donations is greatly appreciated! You may send any of
     the following coins to the address below. Thank you!
+
+.cryptos.is-flex
+  for coin in tips.coins
+    .coin
+      figure.image.is-32x32
+        image(src=`${path}/${coin.toLowerCase()}.svg` width="32" title=coin)
+
+.crypto-link.has-text-centered
+  h4.title.is-4= tips.address
+
+hr.is-invisible
+
+.content.unstoppable-domain.is-small.has-text-centered
+  p.
+    Get your own #[code .crypto] domain at
+    #[a(href=`https://unstoppabledomains.com/${ref}`) unstoppabledomains.com]

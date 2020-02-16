@@ -1,30 +1,32 @@
 doctype html
 
 mixin box(shadowless=true)
-  - var classes = [shadowless ? 'is-shadowless' : '', attributes.class]
-  .box(class=classes)
-    block
+  div(class=attributes.class)
+    .box(class=shadowless ? 'is-shadowless' : '')
+      block
 
 html
 
   head
     meta(charset='utf-8')
     title= title
-    link(rel='stylesheet' href='./style.scss')
+    link(rel='stylesheet' href='./style/_index.scss')
 
   body
 
-    header.hero.is-large
+    header.hero.is-medium.is-super
       .hero-body
         .container
           .columns.is-vcentered
-            .column
+            .column.is-two-thirds
               h1.title.is-1= title
               h3.subtitle.is-3= subtitle
-            .column.has-text-centered
-              p photo
+            .column
+              .user-photo
+                figure.image.is-square
+                  img.is-rounded.is-flipped-x(src='images/photo.jpg')
 
-    section.section
+    section.section.is-medium
       .container
         .columns
           .column
