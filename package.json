@@ -1,10 +1,10 @@
 {
-  "name": "blank-html",
+  "name": "template-personal-minimalist",
   "version": "0.0.1",
-  "description": "Blank HTML starter project",
-  "main": "index.js",
+  "description": "Decentralized website template: Personal Minimalist",
   "author": "Zaim Bakar <zaim@eml.cc> (https://zbr.works)",
   "license": "MIT",
+  "private": true,
   "scripts": {
     "dev": "scripts/parcel",
     "build": "scripts/parcel build"
