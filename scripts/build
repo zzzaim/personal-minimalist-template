@@ -3,6 +3,7 @@
 rm -rf dist
 
 "$(dirname "$0")"/parcel build \
+  "$@" \
   --public-url "./" \
   --no-source-maps \
   --no-autoinstall \

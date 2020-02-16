@@ -1,0 +1,23 @@
+#!/usr/bin/env sh
+
+set -e
+
+dest=$1
+
+if [ -z "$dest" ]; then
+  exit 1
+fi
+
+mv --backup=t -Tv "$dest" "$dest.old"
+mkdir "$dest"
+echo
+
+"$(dirname "$0")"/build --out-dir "$dest"
+
+if [ -f README.md ]; then
+  cp -v README.md "$dest"
+fi
+
+if [ -f screenshot.png ]; then
+  cp -v screenshot.png "$dest"
+fi
