@@ -10,7 +10,6 @@
 @import "~bulma/sass/elements/content";
 @import "~bulma/sass/elements/image";
 @import "~bulma/sass/elements/title";
-@import "~bulma/sass/components/level";
 @import "~bulma/sass/grid/columns";
 @import "~bulma/sass/layout/hero";
 @import "~bulma/sass/layout/section";
@@ -35,19 +34,21 @@
   padding: 2em;
 }
 
-.box-about {
-  margin-bottom: 4em;
-}
+@include desktop {
+  .box-about {
+    margin-bottom: 4em;
+  }
 
-.box-links {
-  margin-top: 5em;
-  margin-left: 4em;
-  margin-right: 3em;
-}
+  .box-links {
+    margin-top: 5em;
+    margin-left: 4em;
+    margin-right: 3em;
+  }
 
-.box-tips {
-  margin-left: 2.5em;
-  margin-right: 2em;
+  .box-tips {
+    margin-left: 2.5em;
+    margin-right: 2em;
+  }
 }
 
 .hero.is-super {
