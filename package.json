@@ -9,7 +9,11 @@
     "dev": "scripts/parcel",
     "build": "scripts/parcel build"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.12.1",
+    "bulma": "^0.8.0",
+    "cryptocurrency-icons": "^0.16.1"
+  },
   "devDependencies": {
     "htmlhint": "^0.11.0",
     "node-sass": "^4.13.1",
