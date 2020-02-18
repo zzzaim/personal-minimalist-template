@@ -1,0 +1,27 @@
+#!/usr/bin/env sh
+
+set -e
+
+dest=${1:-export}
+
+if [ -z "$dest" ]; then
+  echo "Usage: $(basename "$0") <dest-dir>"
+  exit 1
+fi
+
+if [ -d "$dest" ]; then
+  mv --backup=t -Tv "$dest" "$dest.old"
+fi
+
+mkdir "$dest"
+echo
+
+"$(dirname "$0")"/build --out-dir "$dest"
+
+if [ -f "$dest"/index.html ]; then
+  npx prettier "$dest"/index.html --write
+fi
+
+for css in "$dest"/?*.css; do
+  npx prettier "$css" --write
+done

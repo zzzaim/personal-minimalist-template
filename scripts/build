@@ -5,10 +5,7 @@ rm -rf dist
 "$(dirname "$0")"/parcel build \
   "$@" \
   --public-url "./" \
+  --no-minify \
   --no-source-maps \
   --no-autoinstall \
   --no-content-hash || exit 1
-
-if [ -f dist/index.html ]; then
-  npx prettier dist/index.html --write
-fi

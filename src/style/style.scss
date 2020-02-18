@@ -10,81 +10,149 @@
 @import "~bulma/sass/elements/content";
 @import "~bulma/sass/elements/image";
 @import "~bulma/sass/elements/title";
-@import "~bulma/sass/grid/columns";
-@import "~bulma/sass/layout/hero";
-@import "~bulma/sass/layout/section";
 
-.social-link {
-  display: flex;
-  border: 2px solid $black;
-  align-items: center;
-  padding: 1em;
-  margin-bottom: 1em;
-
-  .image {
-    margin-right: 1em;
-  }
-}
-
-.is-flipped-x {
-  transform: scaleX(-1);
-}
-
-.user-photo {
-  padding: 2em;
-}
-
-@include desktop {
-  .box-about {
-    margin-bottom: 4em;
-  }
-
-  .box-links {
-    margin-top: 5em;
-    margin-left: 4em;
-    margin-right: 3em;
-  }
-
-  .box-tips {
-    margin-left: 2.5em;
-    margin-right: 2em;
-  }
-}
-
-.hero.is-super {
+.hero {
   position: relative;
 
-  &:before {
+  &:after {
     content: "";
+    display: block;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url("../images/dot.svg");
+    background-image: url('../images/dot.svg');
+    background-size: 1.5em 1.5em;
     background-repeat: repeat;
-    background-size: 28px 28px;
-    opacity: 0.5;
+    opacity: 0.3;
+  }
+
+  & > .container {
+    display: grid;
+    align-items: center;
+    padding: 1em 0;
+
+    .hero-title {
+      padding: 1em;
+      text-align: center;
+    }
+
+    .hero-photo {
+      padding: 0 1.5em;
+    }
+
+    @include desktop {
+      grid-template-columns: 50% 50%;
+      min-height: 80vh;
+
+      .hero-title {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 1;
+        text-align: left;
+      }
+
+      .hero-photo {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 1;
+        padding: 5em;
+      }
+    }
+  }
+}
+
+.separator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include desktop {
+    min-height: 20vh;
+  }
+}
+
+.profile > .container {
+  display: grid;
+  align-items: center;
+
+  .box {
+    margin: 2em;
+
+    &.is-shadowless {
+      margin: 0;
+    }
+  }
+
+  @include desktop {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr 1fr;
+
+    .box {
+      margin: 0;
+    }
+
+    .box.box-about {
+      margin: 0 2em;
+      margin-bottom: 3em;
+      margin-right: 3em;
+    }
+
+    .box.box-links {
+      margin-left: 4em;
+      margin-right: 5em;
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 1;
+      grid-row-end: 3;
+    }
+
+    .box.box-tips {
+      margin-left: 6em;
+      margin-right: 4em;
+    }
+  }
+}
+
+.profile {
+  @include desktop {
+    padding-bottom: 4em;
+  }
+}
+
+.social-link {
+  border: 2px solid $black;
+  margin-bottom: 1em;
+  padding: 1em;
+  align-items: center;
+
+  .image {
+    margin-right: 0.75em;
+  }
+
+  .social-link-anchor {
+    font-weight: bold;
   }
 }
 
 .cryptos {
-  display: flex;
   justify-content: space-around;
 
-  .coin {
-    &:after {
-      content: "";
-      display: block;
-      width: 2px;
-      height: 1em;
-      margin: 0 auto;
-      background-color: $black;
-    }
+  .coin:after {
+    content: "";
+    display: block;
+    background-color: $black;
+    width: 2px;
+    height: 1em;
+    margin: 0 auto;
   }
 }
 
 .crypto-link {
   padding: 1em;
+  margin-bottom: 2em;
   border: 2px solid $black;
 }
