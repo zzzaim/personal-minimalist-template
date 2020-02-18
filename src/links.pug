@@ -31,7 +31,7 @@ for link in links
     var icon = icons[site];
     var url = urls[site](name);
 
-  a.social-link.is-flex
+  a.social-link.is-flex(href=url)
     figure.image.is-32x32
       image(src=icon width="32")
     span.social-link-anchor= name
