@@ -13,7 +13,7 @@ if [ -d "$dest" ]; then
   mv --backup=t -Tv "$dest" "$dest.old"
 fi
 
-mkdir "$dest"
+mkdir -p "$dest"/assets
 echo
 
 "$(dirname "$0")"/build --out-dir "$dest"
@@ -25,3 +25,12 @@ fi
 for css in "$dest"/?*.css; do
   npx prettier "$css" --write
 done
+
+for css in "$dest"/styles.*.css; do
+  mv "$css" "$dest"/styles.css
+  break
+done
+
+mv "$dest"/*.jpg "$dest"/*.svg "$dest"/*.woff* "$dest"/assets
+
+# TODO: posthml plugin to automatically rename src urls
