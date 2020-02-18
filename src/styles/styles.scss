@@ -40,6 +40,7 @@
 
     .hero-photo {
       padding: 0 1.5em;
+      transform: scaleX(-1);
     }
 
     @include desktop {
