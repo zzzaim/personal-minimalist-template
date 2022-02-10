@@ -17,7 +17,7 @@
   },
   "devDependencies": {
     "htmlhint": "^0.11.0",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "parcel-bundler": "^1.12.4",
     "posthtml-inline-svg": "^0.1.0",
     "posthtml-lorem": "^1.0.0",
